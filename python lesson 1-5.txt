@@ -1,0 +1,243 @@
+
+# ==================================================
+# LESSON 1 - VARIABLES
+# ==================================================
+
+# Concept:
+# Variable ek container hota hai jisme hum data store karte hain.
+# Example:
+# name variable me "Sufiyan" store hai.
+# age variable me 29 store hai.
+
+name = "Sufiyan"
+age = 29
+course = "Data Analysis"
+
+print(name)
+print(age)
+print(course)
+
+# Output:
+# Sufiyan
+# 29
+# Data Analysis
+
+
+# ==================================================
+# LESSON 2 - DATA TYPES
+# ==================================================
+
+# Concept:
+# Data type batata hai ki variable ke andar kis type ka data hai.
+#
+# str   = Text
+# int   = Whole number
+# float = Decimal number
+# bool  = True / False
+
+print(type(name))
+print(type(age))
+print(type(course))
+
+# Output:
+# <class 'str'>
+# <class 'int'>
+# <class 'str'>
+
+
+# ==================================================
+# LESSON 3 - INPUT
+# ==================================================
+
+# Concept:
+# input() user se data lene ke liye use hota hai.
+# input() se normally data string ke form me aata hai.
+# int() string ko number me convert karta hai.
+
+user_name = input("Enter your name: ")
+user_age = int(input("Enter your age: "))
+
+print("Name:", user_name)
+print("Age:", user_age)
+
+# Example Input:
+# Enter your name: Sufiyan
+# Enter your age: 29
+
+# Output:
+# Name: Sufiyan
+# Age: 29
+
+
+# ==================================================
+# LESSON 4 - OPERATORS
+# ==================================================
+
+# Concept:
+# Operators calculation ke liye use hote hain.
+#
+# +  Addition
+# -  Subtraction
+# *  Multiplication
+# /  Division
+
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+
+# Output:
+# Addition: 13
+# Subtraction: 7
+# Multiplication: 30
+# Division: 3.3333333333333335
+
+
+# ==================================================
+# LESSON 5 - IF ELSE
+# ==================================================
+
+# Concept:
+# if condition check karta hai.
+# elif second condition check karta hai.
+# else tab chalta hai jab upar ki conditions False hoti hain.
+
+marks = 75
+
+if marks >= 90:
+    print("A grade")
+elif marks >= 60:
+    print("B grade")
+else:
+    print("C grade")
+
+# Output:
+# B grade
+# ==================================================
+# LESSON 6 - FOR LOOP
+# ==================================================
+
+# Concept:
+# for loop ka use kisi code ko baar-baar repeat karne ke liye hota hai.
+# range(1, 6) ka matlab 1 se 5 tak.
+# 6 include nahi hota.
+
+print("\n========== LESSON 6: FOR LOOP ==========")
+
+for a in range(1, 6):
+    print(a)
+
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
+
+
+# ==================================================
+# LESSON 7 - WHILE LOOP
+# ==================================================
+
+# Concept:
+# while loop tab tak chalta hai jab tak condition True hoti hai.
+# Jab condition False ho jati hai, loop stop ho jata hai.
+
+print("\n========== LESSON 7: WHILE LOOP ==========")
+
+number = 1
+
+while number <= 5:
+    print(number)
+    number = number + 1
+
+# Output:
+# 1
+# 2
+# 3
+# 4
+# 5
+
+
+# ==================================================
+# LESSON 8 - LIST
+# ==================================================
+
+# Concept:
+# List me multiple values store kar sakte hain.
+# List square brackets [ ] me likhi jati hai.
+# List ke andar values ko change kar sakte hain.
+# append() se list ke end me new value add hoti hai.
+
+print("\n========== LESSON 8: LIST ==========")
+
+names = ["Sufiyan", "Ali", "Ahmed", "Rahul"]
+
+print(names)
+
+names.append("Raj")
+
+print(names)
+
+# Output:
+# ['Sufiyan', 'Ali', 'Ahmed', 'Rahul']
+# ['Sufiyan', 'Ali', 'Ahmed', 'Rahul', 'Raj']
+
+
+# ==================================================
+# LESSON 9 - TUPLE
+# ==================================================
+
+# Concept:
+# Tuple me bhi multiple values store kar sakte hain.
+# Tuple round brackets ( ) me likha jata hai.
+# Tuple ko directly change nahi kar sakte.
+
+print("\n========== LESSON 9: TUPLE ==========")
+
+names = ("Sufiyan", "Ali", "Ahmed", "Rahul")
+
+print(names)
+
+print(names[0])
+print(names[1])
+
+# Output:
+# ('Sufiyan', 'Ali', 'Ahmed', 'Rahul')
+# Sufiyan
+# Ali
+
+
+# ==================================================
+# LESSON 10 - DICTIONARY
+# ==================================================
+
+# Concept:
+# Dictionary data ko KEY aur VALUE ke form me store karta hai.
+# Dictionary curly brackets { } me likhi jati hai.
+# Example:
+# name = key
+# Sufiyan = value
+
+print("\n========== LESSON 10: DICTIONARY ==========")
+
+student = {
+    "name": "Sufiyan",
+    "age": 29,
+    "course": "Data Analysis"
+}
+
+print(student)
+
+print(student["name"])
+print(student["age"])
+print(student["course"])
+
+# Output:
+# {'name': 'Sufiyan', 'age': 29, 'course': 'Data Analysis'}
+# Sufiyan
+# 29
+# Data Analysis
