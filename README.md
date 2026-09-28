@@ -18,20 +18,6 @@ A simple Python script that takes user inputs for first, middle, and last names,
 
 > **Note on Loop Limit:** In the current code, the loop stops after collecting **3 names**, although the success message text says *"Collected 5 names"*. You can change `if count == 3:` to `if count == 5:` if you want to collect exactly 5 names.
 
-## Prerequisites
-
-To run this script, you only need Python installed on your system:
-- Python 3.x
-
-## How to Run
-
-1. Clone or download this repository.
-2. Open your terminal or command prompt in the script's directory.
-3. Run the script using the following command:
-
-```bash
-python name_collector.py
-```
 
 ## Example Output
 
