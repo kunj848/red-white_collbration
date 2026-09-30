@@ -1,5 +1,7 @@
 n = int(input("Enter rows: "))
 
+print("\n✨ Butterfly Pattern ✨\n")
+
 for i in range(1, n * 2):
 
     if i <= n:
@@ -9,8 +11,4 @@ for i in range(1, n * 2):
 
     space = 2 * (n - star)
 
-    left = "*" * star
-    middle = " " * space
-    right = "*" * star
-
-    print(left + middle + right)
+    print("*" * star + " " * space + "*" * star)
