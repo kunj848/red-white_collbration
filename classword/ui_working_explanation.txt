@@ -1,0 +1,93 @@
+================================================================================
+          INSTAGRAM 3D STUDIO - UI WORKING EXPLANATION (imag1.png)
+================================================================================
+
+This document explains the working mechanism of each user interface (UI) element
+shown in the screenshot 'imag1.png'.
+
+--------------------------------------------------------------------------------
+1. OVERALL LAYOUT ARCHITECTURE
+--------------------------------------------------------------------------------
+The window uses a modern 2-Column Split Studio Layout:
+- LEFT COLUMN (Width: 380px)  -> Interactive 3D Three.js Simulation Viewport
+- RIGHT COLUMN (Remaining)    -> Account Management Card & Control Panel
+
+Window Specifications:
+- Framework: Python Tkinter (standard library, zero external dependencies)
+- Dimensions: 980 x 660 pixels (resizable with minimum 920 x 620)
+- Theme: Deep obsidian dark mode (#08090E background, #11131C card background)
+- Accents: Instagram official brand gradient (#E1306C, #833AB4, #FD1D1D, #FCB045)
+
+
+--------------------------------------------------------------------------------
+2. LEFT PANEL: 3D THREE.JS SIMULATION VIEWPORT
+--------------------------------------------------------------------------------
+The canvas on the left replicates WebGL / Three.js 3D rendering in pure Python:
+
+A. 3D Instagram Model:
+   - Built from 8 3D vertices (X, Y, Z coordinates) forming a beveled prism.
+   - 6 polygonal faces rendered using Instagram brand gradient colors:
+     * Front:  Magenta (#E1306C)
+     * Back:   Deep Purple (#833AB4)
+     * Top:    Red-Orange (#FD1D1D)
+     * Bottom: Royal Blue (#405DE6)
+     * Left:   Indigo (#5851DB)
+     * Right:  Gold (#FCB045)
+   - Front face details:
+     * 16-point circular camera lens with inner aperture ring.
+     * Flash sensor dot with warm corona glow.
+
+B. Gyroscopic Orbit Rings & 3D Star Galaxy:
+   - An elliptical dashed wireframe orbit ring encircles the model.
+   - 50 floating 3D particle stars rotate in depth with perspective scaling.
+
+C. Interactive Mouse Controls (Three.js OrbitControls):
+   - Left-Click & Drag: Rotates the 3D model in real time (Yaw & Pitch).
+   - Mouse Scroll Wheel: Smoothly zooms the 3D camera in and out.
+   - Auto Momentum: Automatically resumes continuous rotation when mouse is released.
+
+D. HUD (Heads-Up Display) Text:
+   - Top-left: "THREE.JS 3D ENGINE - Interactive WebGL Simulation"
+   - Bottom-right: "DRAG: Orbit 3D  |  SCROLL: Zoom"
+
+
+--------------------------------------------------------------------------------
+3. RIGHT PANEL: ACCOUNT MANAGEMENT CARD
+--------------------------------------------------------------------------------
+The card on the right handles all user input and authentication:
+
+A. Header Section:
+   - Gold badge: "● PYTHON DICTIONARY ENGINE"
+   - Main Title: "Instagram Account Manager"
+   - Subtitle: "Key: Username | Value: Password | Duplicate Key Protection"
+
+B. Segmented Navigation Tabs (ttk.Notebook):
+   - Tab 1: "Create Account"  -> For registering new username & password.
+   - Tab 2: "Login"           -> For verifying credentials against dictionary.
+   - Tab 3: "Dictionary Data" -> Live table & raw dictionary state inspector.
+
+C. Create Account Form Elements:
+   1. Username Field (Dictionary Key):
+      - Text input box with dark background (#171A27) and neon focus border.
+      - Strips accidental leading/trailing spaces automatically.
+   
+   2. Password Field (Dictionary Value):
+      - Password input masked with asterisks (*) by default for security.
+   
+   3. "Show Password" Checkbox:
+      - Toggles input visibility between hidden ("*") and plain text ("").
+
+   4. "Create Account" Action Button:
+      - Prominent full-width button styled with Instagram magenta (#E1306C).
+      - Executes validation, duplicate check, and dictionary insertion.
+
+   5. Dynamic Notification Banner:
+      - Default: "💡 Enter username and password to store into dictionary."
+      - On Error: Turns red (#2A1018 background) displaying duplicate error text.
+      - On Success: Turns green (#0E2319 background) confirming account creation.
+
+D. Bottom Status Bar:
+   - Shows live counter: "Ready. X accounts stored in dictionary."
+   - Automatically increments when an account is saved.
+
+================================================================================
