@@ -1,0 +1,25 @@
+lst =[]
+while(True):
+    choice = int(input('''1. values add \n2. values dekh payega \n3. values remove \n4. toppers marks (80+) \n5. Exit'''))
+    match choice:
+        case 1:
+            value = input("Please enter roll_no,Name, Marks and Age seperated by Spaces")
+            value = value.split()
+            dct1 = {"roll_no": value[0],"Name":value[1],"Marks":int(value[2]),"Age":int(value[3])}
+            lst.append(dct1)
+        case 2:
+            for i in range(len(lst)):
+                print(f"Name :{lst[i]['Name']} |  Marks: {lst[i]['Marks']} | Age:{lst[i]['Age']}")
+        case 3:
+            roll_no=input("Enter roll_no you wanna delete")
+            for i in range(len(lst)):
+                if lst[i]["roll_no"] == roll_no:
+                    del lst[i]
+                    print("Student removed successfully!")
+        case 4:
+            for i in range(len(lst)):
+                if lst[i]['Marks']>80:
+                    print(lst[i])
+        case 5:
+            print("Thank you for using this program")
+            break
