@@ -1,1 +1,57 @@
 https://github.com/zaidmansuri958/LLM
+
+sort vs sorted, which one can be used for sorting list, tuple,set and if it works which collection data type it returns
+
+# ## Question 9 — Sort employees by salary
+
+# Use `sorted()` and `lambda` to sort employees from the lowest salary to the highest salary.
+
+# ```
+# salaries = {    "Aarav": 35000,    "Riya": 45000,    "Kabir": 28000,    "Meera": 40000}# Expected output:# [('Kabir', 28000), ('Aarav', 35000),#  ('Meera', 40000), ('Riya', 45000)]
+# ```
+
+# # Level 4: Real-world challenges
+
+# ## Question 10 — Sort students by marks
+
+# Sort students from the highest marks to the lowest marks.
+
+# ```
+# students = {    "Aarav": 85,    "Riya": 92,    "Kabir": 67,    "Meera": 78}# Expected output:# [('Riya', 92), ('Aarav', 85),#  ('Meera', 78), ('Kabir', 67)]
+# ```
+
+# ## Question 11 — Calculate electricity bills
+
+# An electricity company charges ₹7 per unit. Use `map()` and `lambda` to calculate each customer's bill.
+
+# ```
+# units = [100, 250, 400, 150]# Expected output: [700, 1750, 2800, 1050]
+# ```
+
+# ## Question 12 — Employee bonus challenge
+
+# A company gives bonuses according to these rules:
+
+# - Salary below ₹20,000: 15% bonus
+# - Salary from ₹20,000 to ₹40,000 inclusive: 10% bonus
+# - Salary above ₹40,000: 5% bonus
+
+# Use `map()` and `lambda` to calculate each employee's bonus.
+
+# ```
+# salaries = [15000, 25000, 40000, 50000, 18000]# Expected output: [2250.0, 2500.0, 4000.0, 2500.0, 2700.0]
+# ```
+
+# ## Quick reference for students
+
+# | Function   | Purpose                 | Example                            |
+# | ---------- | ----------------------- | ---------------------------------- |
+# | `map()`    | Transform every item    | Calculate a bonus for every salary |
+# | `filter()` | Select matching items   | Find salaries below ₹30,000        |
+# | `sorted()` | Arrange items in order  | Rank employees by salary           |
+# | `lambda`   | Create a small function | `lambda x: x * 2`                  |
+
+# Recommended practice order: Questions 1–5 first, then 6–9, and finally 10–12. Questions 5, 7, and 12 are especially useful for revising the employee bonus examples you've been teaching.
+
+
+https://app.notion.com/p/Python-Loop-Practice-10-Real-World-Problems-3ff1e73fbc5a801ab7c3c3a99725dda6
